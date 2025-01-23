@@ -1,0 +1,66 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #272829;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    height: 100px;
+}
+  
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo container to maintain aspect ratio and centering */
+.logo-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 10px 0; /* Add some padding to prevent logo from touching navbar edges */
+}
+
+.logo {
+    height: 80px; /* Initial logo size */
+    width: auto; /* Maintain aspect ratio */
+    transition: all 0.3s ease;
+    display: block; /* Removes any extra space below the image */
+}
+
+.logo.scrolled {
+    height: 60px; /* Smaller logo size when scrolled */
+}
+
+.navbar.scrolled {
+    height: 70px; /* Smaller navbar height when scrolled */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #FFF6E0;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+/* Optional: Also decrease font size when scrolled */
+.navbar.scrolled .nav-links a {
+    font-size: 1rem;
+}

@@ -10,6 +10,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import Navbar from "./navbar"
 
 const links = [
   { url:"/page-2",
@@ -37,10 +38,11 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
+  /*<Header siteTitle={data.site.siteMetadata?.title || `Title`} navLinks={links} /> */
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} navLinks={links} />
+      <Navbar siteTitle={data.site.siteMetadata?.title || `Title`} navLinks={links} />
+      
       <div
         style={{
           margin: `0 auto`,
