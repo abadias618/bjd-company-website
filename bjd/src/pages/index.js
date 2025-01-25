@@ -7,6 +7,7 @@ import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 import Parallax from "../components/parallax"
 import parallaxImage from "../images/parallax.jpg"
+import BackgroundShift from "../components/background"
 
 const links = [
   {
@@ -73,7 +74,9 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 
 const IndexPage = () => (
   <Layout>
-
+    <BackgroundShift>
+      Hello
+    </BackgroundShift>
     <Parallax imageSrc={parallaxImage} text="Welcome to Our Website"/>
     <div className={styles.textCenter}>
       <StaticImage

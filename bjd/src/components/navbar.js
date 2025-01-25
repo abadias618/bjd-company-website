@@ -31,15 +31,17 @@ const Navbar = ({siteTitle, navLinks}) => {
             alt="Logo"
             className={`logo ${scrolled ? 'scrolled' : ''}`}
           />
+          <ul className="nav-links">
           <Link
             to="/"
             style={{
                 fontSize: `var(--font-lg)`,
                 textDecoration: `none`,
-                paddingLeft: `20px`
+                paddingLeft: `2rem`
               }}>
             {siteTitle}
           </Link>
+          </ul>
         </div>
         
         <ul className="nav-links">

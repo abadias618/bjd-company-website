@@ -27,6 +27,10 @@
     padding: 10px 0; /* Add some padding to prevent logo from touching navbar edges */
 }
 
+.logo-container.scrolled {
+    height: 60px
+}
+
 .logo {
     height: 80px; /* Initial logo size */
     width: auto; /* Maintain aspect ratio */
@@ -35,7 +39,7 @@
 }
 
 .logo.scrolled {
-    height: 60px; /* Smaller logo size when scrolled */
+   padding: 5px; /* Smaller logo size when scrolled */
 }
 
 .navbar.scrolled {
@@ -63,4 +67,5 @@
 /* Optional: Also decrease font size when scrolled */
 .navbar.scrolled .nav-links a {
     font-size: 1rem;
+    padding-bottom: 2rem;
 }
