@@ -8,6 +8,7 @@ import * as styles from "../components/index.module.css"
 import Parallax from "../components/parallax"
 import parallaxImage from "../images/parallax.jpg"
 import BackgroundShift from "../components/background"
+import GridLayout from "../components/grid"
 
 const links = [
   {
@@ -70,14 +71,16 @@ const moreLinks = [
   { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
 ]
 
+const parallaxText = `Proudly based in Utah`
+
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const IndexPage = () => (
   <Layout>
     <BackgroundShift>
-      Hello
+      <GridLayout></GridLayout>
     </BackgroundShift>
-    <Parallax imageSrc={parallaxImage} text="Welcome to Our Website"/>
+    <Parallax imageSrc={parallaxImage} text={parallaxText}/>
     <div className={styles.textCenter}>
       <StaticImage
         src="../images/logo.png"
