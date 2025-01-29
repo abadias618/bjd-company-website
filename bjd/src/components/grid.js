@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './grid.css';
-import wallBW from "../images/wall-bw.jpg"
+import wallBW from "../images/wall-bw.jpg";
 
 const GridLayout = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -12,7 +12,6 @@ const GridLayout = () => {
     "Carousel Text 3",
     "Carousel Text 4",
   ];
-
   // Auto-slide effect
   useEffect(() => {
     const timer = setInterval(() => {
@@ -63,13 +62,14 @@ const GridLayout = () => {
           Where innovation meets expertise.
         </h2>
         <p className='company-description'>
-          FinTech AI Solutions that transform the way businesses operate with a combination of&nbsp;
+          We provide FinTech AI Solutions that transform the way businesses operate, with a combination of&nbsp;
           <span className='bolder'>financial precision, marketing innovation, AI automation, accounting expertise</span>
           &nbsp;and much more.
           Our solutions streamline processes, optimize performance, and let you <span className='underline'>focus on scaling your business with confidence.</span>
         </p>
+        Some technologies we specialize in:
       </div>
-
+      
       <div className="left-bottom">
         <div className="carousel">
           <button onClick={prevSlide} disabled={sliding}>&lt;</button>
@@ -86,7 +86,7 @@ const GridLayout = () => {
         <div className="image-container">
           <img 
             src={wallBW} 
-            alt="wall image in black and white"
+            alt="wall"
           />
           <div className="image-overlay">
             <p>Overlay text on the image</p>

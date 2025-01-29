@@ -8,13 +8,12 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
 import "./layout.css"
 import Navbar from "./navbar"
 
 const links = [
-  { url:"/page-2",
-    text: "Page 2",
+  { url:"/about",
+    text: "About",
   },
   { url:"/404",
     text:"Page 3"
@@ -38,7 +37,7 @@ const Layout = ({ children }) => {
       }
     }
   `)
-  /*<Header siteTitle={data.site.siteMetadata?.title || `Title`} navLinks={links} /> */
+
   return (
     <>
       <Navbar siteTitle={data.site.siteMetadata?.title || `Title`} navLinks={links} />
@@ -54,11 +53,12 @@ const Layout = ({ children }) => {
           style={{
             marginTop: `var(--space-5)`,
             fontSize: `var(--font-sm)`,
+            marginLeft: `var(--space-5)`
           }}
         >
           © {new Date().getFullYear()} &middot; Built with
           {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <a href="https://www.gatsbyjs.com">Gatsby</a> by Abdias Baldiviezo
         </footer>
       </div>
     </>

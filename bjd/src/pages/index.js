@@ -1,6 +1,5 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -9,31 +8,40 @@ import Parallax from "../components/parallax"
 import parallaxImage from "../images/parallax.jpg"
 import BackgroundShift from "../components/background"
 import GridLayout from "../components/grid"
+import TwoColumns from "../components/twoColumns"
 
 const links = [
   {
-    text: "Tutorial",
+    text: "Data Analysis and Preprocessing",
     url: "https://www.gatsbyjs.com/docs/tutorial",
     description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
+      `Data cleaning, normalization, and transformation for AI model readiness.\n
+      Data labeling and augmentation for supervised learning.\n
+      Data pipeline development to ensure seamless flow for AI models.`,
   },
   {
-    text: "Examples",
+    text: "Natural Language Processing (NLP) Solutions",
     url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
     description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
+      `Chatbots and virtual assistants development for customer service automation.\n
+      Sentiment analysis for market research or customer feedback.\n
+      Text mining and document summarization for knowledge extraction.`,
   },
   {
-    text: "Plugin Library",
+    text: "AI-Driven Marketing Solutions",
     url: "https://www.gatsbyjs.com/plugins",
     description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
+      `Personalized recommendation systems for e-commerce or content delivery.\n
+      Customer segmentation and targeting for campaigns using AI-powered insights.\n
+      Predictive analytics for lead scoring, sales forecasting, and churn prevention.`,
   },
   {
-    text: "Build and Host",
+    text: "AI for Customer Relationship Management (CRM)",
     url: "https://www.gatsbyjs.com/cloud",
     description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
+      `AI-enhanced CRM tools to better manage customer interactions.\n
+      AI-driven customer support automation.\n
+      Chatbots and virtual assistants for handling inquiries in real time.`,
   },
 ]
 
@@ -71,7 +79,7 @@ const moreLinks = [
   { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
 ]
 
-const parallaxText = `Proudly based in Utah`
+const parallaxText = `Our Services:`
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
@@ -81,31 +89,7 @@ const IndexPage = () => (
       <GridLayout></GridLayout>
     </BackgroundShift>
     <Parallax imageSrc={parallaxImage} text={parallaxText}/>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/logo.png"
-        loading="eager"
-        width={500}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)`, marginTop: `var(--space-3)`}}
-      />
-      <h1>
-        Welcome to our <b> Website!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
-    </div>
+    
     <ul className={styles.list} style={{padding: `3rem`}}>
       {links.map(link => (
         <li key={link.url} className={styles.listItem}>
@@ -119,12 +103,31 @@ const IndexPage = () => (
         </li>
       ))}
     </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
+    
+
+  <TwoColumns/>
+
+  <div className={styles.textCenter}>
+    <p className={styles.intro}>
+      <b>Placeholder pages:</b>{" "}
+      {samplePageLinks.map((link, i) => (
+        <React.Fragment key={link.url}>
+          <Link to={link.url}>{link.text}</Link>
+          {i !== samplePageLinks.length - 1 && <> · </>}
+        </React.Fragment>
+      ))}
+      <br />
+      Edit <code>src/pages/index.js</code> to update this page.
+    </p>
+  </div>
+
+  {moreLinks.map((link, i) => (
+    <React.Fragment key={link.url}>
+      <a href={`${link.url}${utmParameters}`}>{link.text}</a>
+      {i !== moreLinks.length - 1 && <> · </>}
+    </React.Fragment>
+  ))}
+
   </Layout>
 )
 

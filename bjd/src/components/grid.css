@@ -38,11 +38,12 @@
 
 .carousel button {
     padding: 10px 15px;
-    background-color: #ddd;
+    background-color: transparent;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     z-index: 2;
+    color: #FFF6E0;
 }
 
 .carousel button:disabled {
@@ -72,9 +73,9 @@
 
 .slide-right {
     animation: slideRight 0.5s ease-in-out;
-    }
+}
 
-    @keyframes slideLeft {
+@keyframes slideLeft {
     0% {
         transform: translateX(0);
         opacity: 1;
@@ -83,9 +84,9 @@
         transform: translateX(-100%);
         opacity: 0;
     }
-    }
+}
 
-    @keyframes slideRight {
+@keyframes slideRight {
     0% {
         transform: translateX(0);
         opacity: 1;
@@ -107,6 +108,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    margin-bottom: 0px;
 }
 
 .image-overlay {
