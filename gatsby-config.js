@@ -10,8 +10,8 @@
 module.exports = {
   siteMetadata: {
     title: `Bradford, Jensen & Dominguez`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `BJD Company website`,
+    author: `@Abadias618`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
@@ -20,7 +20,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/images/`,
       },
     },
     `gatsby-transformer-sharp`,
