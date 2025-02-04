@@ -1,16 +1,49 @@
 import React, { useState, useEffect } from 'react';
 import './grid.css';
 import wallBW from "../images/wall-bw.jpg";
+// Carousel Images
+import adobeLogo from "../images/Adobe-Creative-Cloud-Logo-PNG.png";
+import davinciLogo from "../images/davinci.png";
+import sonyLogo from "../images/sony.png";
+import powerbiLogo from "../images/power_bi.png";
+import analyticsLogo from "../images/analytics.png";
+import tableauLogo from "../images/tableau.png";
+import lookerLogo from "../images/looker.png";
+import excelLogo from "../images/excel.png";
+import quickbooksLogo from "../images/quickbooks.png";
+import tfLogo from "../images/tf.png";
+import openaiLogo from "../images/openai.png";
 
 const GridLayout = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [sliding, setSliding] = useState(false);
   
   const carouselItems = [
-    "Carousel Text 1",
-    "Carousel Text 2",
-    "Carousel Text 3",
-    "Carousel Text 4",
+    adobeLogo,
+    davinciLogo,
+    sonyLogo,
+    powerbiLogo,
+    analyticsLogo,
+    tableauLogo,
+    lookerLogo,
+    excelLogo,
+    quickbooksLogo,
+    tfLogo,
+    openaiLogo,
+
+  ];
+  const carouselItemsText = [
+    "Adobe Creative Cloud",
+    "Davinci Resolve",
+    "FX3 Format Shot Ads",
+    "Power BI",
+    "Google Analytics",
+    "Tableau",
+    "Looker",
+    "Microsoft Excel",
+    "QuickBooks",
+    "Tensorflow",
+    "OpenAI Models"
   ];
   // Auto-slide effect
   useEffect(() => {
@@ -28,7 +61,7 @@ const GridLayout = () => {
         prev === carouselItems.length - 1 ? 0 : prev + 1
       );
       setSliding(false);
-    }, 500); // Match this with CSS animation duration
+    }, 1000); // Match this with CSS animation duration
   };
 
   const prevSlide = () => {
@@ -38,7 +71,7 @@ const GridLayout = () => {
         prev === 0 ? carouselItems.length - 1 : prev - 1
       );
       setSliding(false);
-    }, 500); // Match this with CSS animation duration
+    }, 1000); // Match this with CSS animation duration
   };
   /*
   Welcome to Bradford, Jensen & Dominguez – where innovation meets expertise to transform your business potential 
@@ -67,15 +100,20 @@ const GridLayout = () => {
           &nbsp;and much more.
           Our solutions streamline processes, optimize performance, and let you <span className='underline'>focus on scaling your business with confidence.</span>
         </p>
-        Some technologies we specialize in:
       </div>
       
       <div className="left-bottom">
+        <h2 className='carousel-text'>We specialize in:</h2>
         <div className="carousel">
           <button onClick={prevSlide} disabled={sliding}>&lt;</button>
           <div className="carousel-viewport">
             <div className={`carousel-content ${sliding}`}>
-              {carouselItems[currentSlide]}
+              <div>
+                <img src={carouselItems[currentSlide]} height="100px" alt="carousel-logo"/>
+                <span className='carousel-text'>
+                  {carouselItemsText[currentSlide]}
+                </span>
+              </div>
             </div>
           </div>
           <button onClick={nextSlide} disabled={sliding}>&gt;</button>
@@ -89,7 +127,7 @@ const GridLayout = () => {
             alt="wall"
           />
           <div className="image-overlay">
-            <p>Overlay text on the image</p>
+            <p>We combine creativity, data, and AI to drive successful results. Let's grow your business with technology-driven marketing solutions.</p>
           </div>
         </div>
       </div>

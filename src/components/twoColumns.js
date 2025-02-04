@@ -1,11 +1,10 @@
-// GridLayout.jsx
 import React from 'react';
 import './twoColumns.css';
 import bigLogo from "../images/logo.png";
 
 const TwoColumns = () => {
   return (
-    <div className="grid-container-2">
+    <div className="grid-container-2" id="about-section">
       <div className="image-column">
         <img src={bigLogo} alt="logo" />
       </div>
