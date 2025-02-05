@@ -100,10 +100,14 @@ const GridLayout = () => {
           &nbsp;and much more.
           Our solutions streamline processes, optimize performance, and let you <span className='underline'>focus on scaling your business with confidence.</span>
         </p>
+        <a href="mailto:info@bjdfirm.com" class="email-button">
+          Contact Us
+        </a>
+        <h2>We specialize in:</h2>
       </div>
       
       <div className="left-bottom">
-        <h2 className='carousel-text'>We specialize in:</h2>
+        
         <div className="carousel">
           <button onClick={prevSlide} disabled={sliding}>&lt;</button>
           <div className="carousel-viewport">

@@ -29,11 +29,52 @@
     position: relative;
 }
 
+.email-button {
+    display: inline-block;
+    padding: 12px 24px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+/* Creative hover animation - Option 1: Slide effect */
+.email-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.email-button:hover::before {
+    left: 0;
+}
+
+.email-button:hover {
+    color: #000; /* Text color when hovering */
+    transform: scale(1.05);
+}
+
+
+
 /* Carousel styles */
 .carousel {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -57,26 +98,31 @@
     flex-grow: 1;
     overflow: hidden;
     position: relative;
+    justify-content: center;
 }
 
 .carousel-content {
-    text-align: center;
+    text-align: rig;
     background-color: #272829;
     border-radius: 5px;
     position: relative;
     width: 100%;
+    justify-content: center;
 }
 
 .carousel-content > div {
     display: flex;
     align-items: center;
-    gap: 10%;
+    justify-content: center;
+    gap: 3em;
     flex-direction: row;
 }
 .carousel-text {
     font-family: monospace;
     font-size: inherit;
     font-weight: bolder;
+    align-items: center;
+    display: inline-flex;
 }
 
 
@@ -134,6 +180,7 @@
     color: white;
     padding: 20px;
     text-align: center;
+    font-family: monospace;
 }
 
 /* Responsive design */

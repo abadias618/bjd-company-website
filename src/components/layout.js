@@ -12,14 +12,17 @@ import "./layout.css"
 import Navbar from "./navbar"
 
 const links = [
-  { url:"#about-section",
-    text: "About",
+  { url:"/",
+    text: "Home",
   },
-  { url:"/404",
-    text:"Page 3"
+  { url:"/#about-section",
+    text: "About Us",
   },
-  { url:"/404",
-    text:"Page 4"
+  { url:"/services",
+    text:"Services"
+  },
+  { url:"/contact",
+    text:"Contact"
   },
   { url:"/404",
     text:"Page 5"
