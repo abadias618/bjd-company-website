@@ -5,6 +5,7 @@
     height: 100vh;
     gap: 20px;
     padding: 20px;
+    overflow: hidden;
 }
 
 .left-top {

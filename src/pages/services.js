@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import ServicesComp from "../components/servicesComp"
 
 const links = [
   {
@@ -79,7 +80,7 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 
 const ServicesPage = () => (
   <Layout>
-    
+    <ServicesComp></ServicesComp>
   </Layout>
 )
 

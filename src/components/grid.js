@@ -73,17 +73,7 @@ const GridLayout = () => {
       setSliding(false);
     }, 1000); // Match this with CSS animation duration
   };
-  /*
-  Welcome to Bradford, Jensen & Dominguez – where innovation meets expertise to transform your business potential 
-  into measurable success. As your trusted partner, we specialize in delivering dynamic solutions that empower 
-  businesses to scale, streamline, and thrive. With a powerhouse team of financial strategists, accounting experts, 
-  marketing specialists, and AI innovators, we provide comprehensive services tailored to elevate your business in 
-  today’s competitive landscape.
-
-  Our mission is simple: to unlock opportunities, drive growth, and equip your business with the tools and strategies 
-  it needs to achieve extraordinary results. At [Your Business Name], we don't just support your business—we 
-  revolutionize it. Let us be the catalyst for your success.
-  */
+  
   return (
     <div className="grid-container">
       <div className="left-top">

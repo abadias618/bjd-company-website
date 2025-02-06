@@ -43,6 +43,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <div style={{paddingTop:`100px`}}></div>
       <Navbar siteTitle={data.site.siteMetadata?.title || `Title`} navLinks={links} />
       
       <div

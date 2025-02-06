@@ -20,9 +20,14 @@ const TwoColumns = () => {
             today's competitive landscape.
 
             Our mission is simple: to unlock opportunities, drive growth, and equip your business with the tools and strategies 
-            it needs to achieve extraordinary results. At [Your Business Name], we don't just support your business—we 
+            it needs to achieve extraordinary results. At [BJD Firm], we don't just support your business—we 
             revolutionize it. Let us be the catalyst for your success.
         </p>
+        <div>
+          <a href="mailto:info@bjdfirm.com">
+            Send us an email.
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -13,7 +12,7 @@ import TwoColumns from "../components/twoColumns"
 const links = [
   {
     text: "Data Analysis and Preprocessing",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
+    url: "/services",
     description:
       `Data cleaning, normalization, and transformation for AI model readiness.\n
       Data labeling and augmentation for supervised learning.\n
@@ -21,67 +20,72 @@ const links = [
   },
   {
     text: "Natural Language Processing (NLP) Solutions",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
+    url: "/services",
     description:
       `Chatbots and virtual assistants development for customer service automation.\n
-      Sentiment analysis for market research or customer feedback.\n
+      Sentiment analysis for market research or customer feedback.
       Text mining and document summarization for knowledge extraction.`,
   },
   {
     text: "AI-Driven Marketing Solutions",
-    url: "https://www.gatsbyjs.com/plugins",
+    url: "/services",
     description:
-      `Personalized recommendation systems for e-commerce or content delivery.\n
-      Customer segmentation and targeting for campaigns using AI-powered insights.\n
-      Predictive analytics for lead scoring, sales forecasting, and churn prevention.`,
+      `Analytics Dashboards - Real-time insights with Google Analytics, Looker,\n
+      Power BI, and Tableau.\n
+      AI Models - Smarter marketing with machine learning\n
+      for better targeting and automation.`,
   },
   {
     text: "AI for Customer Relationship Management (CRM)",
-    url: "https://www.gatsbyjs.com/cloud",
+    url: "/services",
     description:
       `AI-enhanced CRM tools to better manage customer interactions.\n
       AI-driven customer support automation.\n
       Chatbots and virtual assistants for handling inquiries in real time.`,
   },
-]
-
-const samplePageLinks = [
   {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
+    text: "Financial Planning & Growth Strategies",
+    url: "/services",
     description:
-      "A simple example of linking to another page within a Gatsby site",
+      `Diversifying investments, setting up an emergency fund, prioritizing\n
+      high-interest debt repayment, automating savings contributions, investing\n
+      in tax-advantaged accounts, expanding a business through reinvestment of profits,\n
+      regularly reviewing and adjusting financial goals, and seeking professional\n
+      financial advice for complex decisions.`,
   },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
+  {
+    text: "Budgeting & Cash Flow Management",
+    url: "/services",
+    description:
+      `Tracking monthly expenses, setting spending limits for discretionary categories,\n
+      creating a cash reserve for unexpected costs, prioritizing essential bills and debt\n
+      payments, automating bill payments to avoid late fees, analyzing income vs. expenses\n
+      to identify savings opportunities, and adjusting lifestyle choices to improve cash flow.`,
+  },
+  {
+    text: "Financial Statements & Reporting",
+    url: "/services",
+    description:
+      `Creating income statements to track revenue and expenses, preparing balance sheets to\n
+      assess assets and liabilities, generating cash flow statements to monitor liquidity,\n
+      reviewing profit and loss reports to evaluate business performance, conducting variance\n
+      analysis to compare actual vs. projected financial results, and producing quarterly\n
+      financial reports for stakeholders.`,
+  },
+  {
+    text: "Profitability & Cost Optimization",
+    url: "/services",
+    description:
+      `Reducing operational expenses through process automation, increasing product prices\n
+      without sacrificing demand, renegotiating supplier contracts for better terms,\n
+      outsourcing non-core functions to cut costs, improving inventory management to reduce\n
+      waste, streamlining production processes to enhance efficiency, and identifying\n
+      underperforming products to phase out or improve.`,
+  },
 
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
 ]
 
 const parallaxText = `Our Services:`
-
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const IndexPage = () => (
   <Layout>
@@ -95,7 +99,7 @@ const IndexPage = () => (
         <li key={link.url} className={styles.listItem}>
           <a
             className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
+            href={`${link.url}`}
           >
             {link.text} ↗
           </a>
@@ -103,30 +107,8 @@ const IndexPage = () => (
         </li>
       ))}
     </ul>
-    
 
-  <TwoColumns/>
-
-  <div className={styles.textCenter}>
-    <p className={styles.intro}>
-      <b>Placeholder pages:</b>{" "}
-      {samplePageLinks.map((link, i) => (
-        <React.Fragment key={link.url}>
-          <Link to={link.url}>{link.text}</Link>
-          {i !== samplePageLinks.length - 1 && <> · </>}
-        </React.Fragment>
-      ))}
-      <br />
-      Edit <code>src/pages/index.js</code> to update this page.
-    </p>
-  </div>
-
-  {moreLinks.map((link, i) => (
-    <React.Fragment key={link.url}>
-      <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-      {i !== moreLinks.length - 1 && <> · </>}
-    </React.Fragment>
-  ))}
+    <TwoColumns/>
 
   </Layout>
 )
