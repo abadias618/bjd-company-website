@@ -33,6 +33,22 @@
   color: #663399;
 }
 
+.listItem:nth-child(5)::marker {
+  color: #e95800;
+}
+
+.listItem:nth-child(6)::marker {
+  color: #159bf3;
+}
+
+.listItem:nth-child(7)::marker {
+  color: #8eb814;
+}
+
+.listItem:nth-child(8)::marker {
+  color: #663399;
+}
+
 .listItemLink {
   color: var(--color-primary);
   font-weight: bold;

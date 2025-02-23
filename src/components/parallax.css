@@ -1,6 +1,6 @@
 .parallax-container {
   position: relative;
-  height: 50rem;
+  height: 40rem;
   overflow: hidden;
 }
   
@@ -26,5 +26,6 @@
   padding: 20px; /* Changed from padding-top to all-around padding */
   color: white;
   font-size: 2rem;
-  font-family: monospace;
+  font-family: "Titillium Web";
+  text-shadow: 2px 2px 4px black;
 }

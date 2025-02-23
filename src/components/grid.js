@@ -93,11 +93,9 @@ const GridLayout = () => {
         <a href="mailto:info@bjdfirm.com" class="email-button">
           Contact Us
         </a>
-        <h2>We specialize in:</h2>
       </div>
       
       <div className="left-bottom">
-        
         <div className="carousel">
           <button onClick={prevSlide} disabled={sliding}>&lt;</button>
           <div className="carousel-viewport">
@@ -121,7 +119,8 @@ const GridLayout = () => {
             alt="wall"
           />
           <div className="image-overlay">
-            <p>We combine creativity, data, and AI to drive successful results. Let's grow your business with technology-driven marketing solutions.</p>
+            <p>We combine creativity, data, and AI to drive successful results.</p>
+            <p>Let's grow your business with technology-driven marketing solutions.</p>
           </div>
         </div>
       </div>

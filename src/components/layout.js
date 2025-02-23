@@ -24,10 +24,6 @@ const links = [
   { url:"/contact",
     text:"Contact"
   },
-  { url:"/404",
-    text:"Page 5"
-  },
-  
 ]
 
 const Layout = ({ children }) => {
@@ -55,9 +51,7 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         <footer
           style={{
-            marginTop: `var(--space-5)`,
             fontSize: `var(--font-sm)`,
-            marginLeft: `var(--space-5)`
           }}
         >
           © {new Date().getFullYear()} &middot; Built with

@@ -5,10 +5,9 @@
   --color-code-bg: #fff4db;
   --color-code: #8a6534;
   --color-navbar: #CFB495;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-sans: "Titillium Web";
   --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
+    "Courier New", "Titillium Web";
   --font-lg: 18px;
   --font-md: 16px;
   --font-sm: 14px;
@@ -38,7 +37,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: var(--color-text);
-  font-family: sans-serif;
+  font-family: "Titillium Web";
   font-family: var(--font-sans);
   font-weight: normal;
   margin: 0;
@@ -222,4 +221,8 @@ pre code:after,
 pre tt:before,
 pre tt:after {
   content: none;
+}
+footer {
+  background-color: #5D5B6A;
+  margin: 0px;
 }

@@ -40,19 +40,6 @@ const ContactUs = () => {
               </a>
             </div>
 
-            {/* Address Section */}
-            <div className="info-card">
-              <div className="icon-wrapper">
-                <FaMapMarkerAlt className="icon" />
-              </div>
-              <h3>Visit Us</h3>
-              <p className="info-text">
-                123 Business Street<br />
-                Suite 100<br />
-                New York, NY 10001
-              </p>
-            </div>
-
             {/* Hours Section */}
             <div className="info-card">
               <div className="icon-wrapper">

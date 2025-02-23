@@ -97,7 +97,8 @@
   }
   
   .info-text:hover {
-    color: #00ff88;
+    color: white;
+    border-color: #272829;
   }
   
   .social-links {
@@ -114,7 +115,7 @@
   }
   
   .social-icon:hover {
-    color: #00ff88;
+    color: #272829;
     transform: scale(1.2);
   }
   

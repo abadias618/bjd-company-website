@@ -1,41 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './servicesComp.css';
-import { motion } from 'framer-motion'; // For better animations
+import { motion } from 'framer-motion';
+
+import b1 from "../images/b1.jpg";
+import b2 from "../images/b2.jpg";
+import b3 from "../images/b3.jpg";
+import b4 from "../images/b4.jpg";
 
 const services = [
   {
     id: 1,
     title: "Financial Analysis",
-    image: "/path-to-your-image/financial.png",
+    image: b1,
     description: "Comprehensive financial analysis and reporting to drive informed business decisions.",
-    icon: "💹"
+    detailedDescription: "Our financial analysis service provides deep insights into your company's financial health, identifying opportunities for growth, cost reduction, and strategic investment.",
+    icon: "💹",
+    link:"/services/marketing"
   },
+
   {
     id: 2,
     title: "AI Solutions",
-    image: "/path-to-your-image/ai.png",
+    image: b2,
     description: "Custom AI implementations to automate and optimize your business processes.",
-    icon: "🤖"
+    icon: "🤖",
+    link:"/services/marketing"
   },
   {
     id: 3,
     title: "Digital Marketing",
-    image: "/path-to-your-image/marketing.png",
+    image: b3,
     description: "Strategic digital marketing solutions to boost your online presence.",
-    icon: "📱"
+    detailedDescription:"Developing and implementing AI-driven marketing strategies to optimize campaigns, personalize customer experiences, and enhance decision-making processes.",
+    icon: "📱",
+    link:"/services/marketing"
   },
   {
     id: 4,
     title: "Data Analytics",
-    image: "/path-to-your-image/analytics.png",
+    image: b4,
     description: "Advanced data analytics to uncover insights and drive growth.",
-    icon: "📊"
+    icon: "📊",
+    link:"/services/marketing"
   },
-  // Add more services as needed
 ];
 
 const ServicesComp = () => {
-  // Animation variants for Framer Motion
+  const [flippedCard, setFlippedCard] = useState(null);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -81,42 +93,56 @@ const ServicesComp = () => {
         {services.map((service) => (
           <motion.div 
             key={service.id}
-            className="service-card"
+            className={`service-card ${flippedCard === service.id ? 'flipped' : ''}`}
             variants={cardVariants}
-            whileHover={{ 
-              scale: 1.05,
-              transition: { duration: 0.3 }
-            }}
+            onHoverStart={() => setFlippedCard(service.id)}
+            onHoverEnd={() => setFlippedCard(null)}
           >
-            <div className="card-content">
-              <div className="image-container-card">
-                <motion.img
-                  src={service.image}
-                  alt={service.title}
-                  initial={{ scale: 0.8 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                />
-                <span className="service-icon">{service.icon}</span>
+            <div className="card-inner">
+              {/* Front of the card */}
+              <div className="card-front">
+                <div className="image-container-card">
+                  <motion.img
+                    src={service.image}
+                    alt={service.title}
+                    initial={{ scale: 0.8 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                  />
+                  <span className="service-icon">{service.icon}</span>
+                </div>
+                
+                <motion.h2 className="service-title">
+                  {service.title}
+                </motion.h2>
+                
+                <motion.p className="service-description">
+                  {service.description}
+                </motion.p>
               </div>
-              
-              <motion.h2 
-                className="service-title"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-              >
-                {service.title}
-              </motion.h2>
-              
-              <motion.p 
-                className="service-description"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3 }}
-              >
-                {service.description}
-              </motion.p>
+
+              {/* Back of the card */}
+              <div className="card-back">
+                <motion.h2 className="service-title">
+                  {service.title}
+                </motion.h2>
+                
+                <motion.p className="service-detailed-description">
+                  {service.detailedDescription}
+                </motion.p>
+                
+                <motion.button 
+                  className="learn-more-btn"
+                  whileHover={{ 
+                    scale: 1.1,
+                    backgroundColor: "#007bff",
+                    color: "white"
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <a href={service.link} style={{all: `unset`}}>Learn More</a>
+                </motion.button>
+              </div>
             </div>
           </motion.div>
         ))}

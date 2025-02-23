@@ -14,73 +14,75 @@ const links = [
     text: "Data Analysis and Preprocessing",
     url: "/services",
     description:
-      `Data cleaning, normalization, and transformation for AI model readiness.\n
-      Data labeling and augmentation for supervised learning.\n
-      Data pipeline development to ensure seamless flow for AI models.`,
+      `Prepare your data for AI success! We offer comprehensive data cleaning, 
+      normalization, and transformation to get your data model-ready.
+      Our services also include data labeling and augmentation for effective
+      supervised learning and seamless data pipeline development for optimal
+      AI model flow.`,
   },
   {
     text: "Natural Language Processing (NLP) Solutions",
     url: "/services",
     description:
-      `Chatbots and virtual assistants development for customer service automation.\n
-      Sentiment analysis for market research or customer feedback.
-      Text mining and document summarization for knowledge extraction.`,
+      `Revolutionize customer interactions with our NLP solutions! We develop
+      intelligent chatbots and virtual assistants for automated customer service.
+      Leverage sentiment analysis for insightful market research and customer feedback.
+      Plus, our text mining and document summarization services help you extract
+      valuable knowledge effortlessly.`,
   },
   {
     text: "AI-Driven Marketing Solutions",
     url: "/services",
     description:
-      `Analytics Dashboards - Real-time insights with Google Analytics, Looker,\n
-      Power BI, and Tableau.\n
-      AI Models - Smarter marketing with machine learning\n
-      for better targeting and automation.`,
+      `Supercharge your marketing strategy with AI! Gain real-time insights through
+      advanced analytics dashboards using Google Analytics, Looker, Power BI, and
+      Tableau. Our AI models enhance targeting and automate marketing efforts,
+      driving smarter decisions and better results.`,
   },
   {
     text: "AI for Customer Relationship Management (CRM)",
     url: "/services",
     description:
-      `AI-enhanced CRM tools to better manage customer interactions.\n
-      AI-driven customer support automation.\n
-      Chatbots and virtual assistants for handling inquiries in real time.`,
+      `Enhance customer interactions with AI-powered CRM tools! Streamline customer
+      support with automation and real-time chatbots. Boost engagement and satisfaction
+      by efficiently managing inquiries and interactions.`,
   },
   {
     text: "Financial Planning & Growth Strategies",
     url: "/services",
     description:
-      `Diversifying investments, setting up an emergency fund, prioritizing\n
-      high-interest debt repayment, automating savings contributions, investing\n
-      in tax-advantaged accounts, expanding a business through reinvestment of profits,\n
-      regularly reviewing and adjusting financial goals, and seeking professional\n
-      financial advice for complex decisions.`,
+      `Secure your financial future! We help you diversify investments, build an
+      emergency fund, and prioritize high-interest debt repayment. Maximize savings
+      with automated contributions and invest in tax-advantaged accounts. We also
+      guide business growth through profit reinvestment and regular financial goal
+      adjustments.`,
   },
   {
     text: "Budgeting & Cash Flow Management",
     url: "/services",
     description:
-      `Tracking monthly expenses, setting spending limits for discretionary categories,\n
-      creating a cash reserve for unexpected costs, prioritizing essential bills and debt\n
-      payments, automating bill payments to avoid late fees, analyzing income vs. expenses\n
-      to identify savings opportunities, and adjusting lifestyle choices to improve cash flow.`,
+      `Take control of your finances! Track expenses, set spending limits, and create
+      cash reserves for unexpected costs. Prioritize essential bills, automate payments,
+      and analyze income versus expenses to uncover savings opportunities and enhance
+      cash flow.`,
   },
   {
     text: "Financial Statements & Reporting",
     url: "/services",
     description:
-      `Creating income statements to track revenue and expenses, preparing balance sheets to\n
-      assess assets and liabilities, generating cash flow statements to monitor liquidity,\n
-      reviewing profit and loss reports to evaluate business performance, conducting variance\n
-      analysis to compare actual vs. projected financial results, and producing quarterly\n
-      financial reports for stakeholders.`,
+      `Gain financial clarity! We prepare detailed income statements, balance sheets,
+      and cash flow statements to monitor liquidity and performance. Our variance
+      analysis and quarterly reports help you make informed decisions and keep
+      stakeholders informed.`,
   },
   {
     text: "Profitability & Cost Optimization",
     url: "/services",
     description:
-      `Reducing operational expenses through process automation, increasing product prices\n
-      without sacrificing demand, renegotiating supplier contracts for better terms,\n
-      outsourcing non-core functions to cut costs, improving inventory management to reduce\n
-      waste, streamlining production processes to enhance efficiency, and identifying\n
-      underperforming products to phase out or improve.`,
+      `Maximize profitability and minimize costs! Optimize operations with automation,
+      adjust pricing strategies, and negotiate better supplier contracts. Improve
+      inventory management, streamline production, and phase out underperforming
+      products to enhance overall efficiency.`,
   },
 
 ]
