@@ -24,7 +24,7 @@ const services = [
     image: b2,
     description: "Custom AI implementations to automate and optimize your business processes.",
     icon: "🤖",
-    link:"/services/marketing"
+    link:"/services/ai"
   },
   {
     id: 3,

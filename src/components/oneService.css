@@ -7,6 +7,16 @@
     padding: 20px;
 }
 
+.service-overview-div {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.service-overview-div p {
+    white-space: pre-wrap;
+}
+
 .service-card-single-service {
     width: 100%;
     max-width: 1000px;

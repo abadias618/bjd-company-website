@@ -1,7 +1,7 @@
 import React from 'react';
 import './contactUs.css';
 import backgroundImage from "../images/wall-bw.jpg";
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaClock, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaClock, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const ContactUs = () => {
   return (
@@ -18,11 +18,14 @@ const ContactUs = () => {
                 <FaEnvelope className="icon" />
               </div>
               <h3>Email Us</h3>
-              <a href="mailto:info@example.com" className="info-text">
-                info@example.com
+              <a href="mailto:info@bjdfirm.com" className="info-text">
+                info@bjdfirm.com
               </a>
-              <a href="mailto:support@example.com" className="info-text">
-                support@example.com
+              <a href="mailto:andres.dominguez@bjdfirm.com" className="info-text">
+                andres.dominguez@bjdfirm.com
+              </a>
+              <a href="mailto:patricio.borda.28@bjdfirm.com" className="info-text">
+                patricio.borda.28@bjdfirm.com
               </a>
             </div>
 
