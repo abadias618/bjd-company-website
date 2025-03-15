@@ -8,6 +8,7 @@ import parallaxImage from "../images/parallax.jpg"
 import BackgroundShift from "../components/background"
 import GridLayout from "../components/grid"
 import TwoColumns from "../components/twoColumns"
+import Carousel from "../components/carousel"
 
 const links = [
   {
@@ -95,7 +96,7 @@ const IndexPage = () => (
       <GridLayout></GridLayout>
     </BackgroundShift>
     <Parallax imageSrc={parallaxImage} text={parallaxText}/>
-    
+    <Carousel></Carousel>
     <ul className={styles.list} style={{padding: `3rem`}}>
       {links.map(link => (
         <li key={link.url} className={styles.listItem}>

@@ -1,0 +1,55 @@
+/* Carousel styles */
+.carousel {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 3rem;
+}
+
+.carousel button {
+    padding: 10px 15px;
+    background-color: transparent;
+    border: none;
+    margin: none;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 2;
+    color: #272829;
+}
+
+.carousel button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.carousel-viewport {
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+}
+
+.carousel-content {
+    text-align: rig;
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+}
+
+.carousel-content > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    flex-direction: row;
+}
+.carousel-text {
+    font-family: "Titillium Web";
+    font-size: inherit;
+    font-weight: bolder;
+    align-items: center;
+    display: inline-flex;
+}

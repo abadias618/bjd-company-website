@@ -5,10 +5,11 @@ import logo from "../images/bjd-favicon.png"
 
 const Navbar = ({siteTitle, navLinks}) => {
   const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 50; // Change this value to adjust when the transition happens
+      const isScrolled = window.scrollY > 50;
       if (isScrolled !== scrolled) {
         setScrolled(isScrolled);
       }
@@ -16,11 +17,23 @@ const Navbar = ({siteTitle, navLinks}) => {
 
     window.addEventListener('scroll', handleScroll);
 
-    // Cleanup the event listener on component unmount
+    // Close menu when scrolling
+    window.addEventListener('scroll', () => setIsMenuOpen(false));
+
+    // Cleanup the event listeners on component unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', () => setIsMenuOpen(false));
     };
   }, [scrolled]);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
@@ -31,27 +44,32 @@ const Navbar = ({siteTitle, navLinks}) => {
             alt="Logo"
             className={`logo ${scrolled ? 'scrolled' : ''}`}
           />
-          <ul className="nav-links">
-          <Link
-            to="/"
-            style={{
-                fontSize: `var(--font-lg)`,
-                textDecoration: `none`,
-                paddingLeft: `2rem`
-              }}>
+          <Link to="/" className='site-title'>
             {siteTitle}
           </Link>
-          </ul>
         </div>
         
-        <ul className="nav-links">
-            {navLinks.map(link => (
-                <Link
-                    to={link.url}
-                >
-                    <li>{link.text}</li>
-                </Link>
-            ))}
+        {/* Burger Menu Button */}
+        <div 
+          className={`burger-menu ${isMenuOpen ? 'open' : ''}`} 
+          onClick={toggleMenu}
+        >
+          <div className="burger-line"></div>
+          <div className="burger-line"></div>
+          <div className="burger-line"></div>
+        </div>
+        
+        {/* Navigation Links */}
+        <ul className={`nav-links ${isMenuOpen ? 'mobile-menu-open' : ''}`}>
+          {navLinks.map((link, index) => (
+            <Link
+              key={index}
+              to={link.url}
+              onClick={closeMenu}
+            >
+              <li>{link.text}</li>
+            </Link>
+          ))}
         </ul>
       </div>
     </nav>
