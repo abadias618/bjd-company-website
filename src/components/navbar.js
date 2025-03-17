@@ -7,24 +7,30 @@ const Navbar = ({siteTitle, navLinks}) => {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
+    // Check if window is defined (client-side)
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 50;
-      if (isScrolled !== scrolled) {
-        setScrolled(isScrolled);
+      if (typeof window !== 'undefined') {
+        const isScrolled = window.scrollY > 50;
+        if (isScrolled !== scrolled) {
+          setScrolled(isScrolled);
+        }
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    // Only add event listener if window is available
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll);
 
-    // Close menu when scrolling
-    window.addEventListener('scroll', () => setIsMenuOpen(false));
+      // Close menu when scrolling
+      window.addEventListener('scroll', () => setIsMenuOpen(false));
 
-    // Cleanup the event listeners on component unmount
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('scroll', () => setIsMenuOpen(false));
-    };
+      // Cleanup the event listeners on component unmount
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+        window.removeEventListener('scroll', () => setIsMenuOpen(false));
+      };
+    }
   }, [scrolled]);
 
   const toggleMenu = () => {

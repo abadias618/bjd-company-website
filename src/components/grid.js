@@ -1,20 +1,26 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './grid.css';
 import wallBW from "../images/wall-bw-alt-bg.png";
 
 const GridLayout = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(false);
 
-  useLayoutEffect(() => {
-    const handleResize = () => {
+  useEffect(() => {
+    // Only run on client-side
+    if (typeof window !== 'undefined') {
+      // Initial check
       setIsMobile(window.innerWidth <= 768);
-    };
 
-    // Add event listener
-    window.addEventListener('resize', handleResize);
+      const handleResize = () => {
+        setIsMobile(window.innerWidth <= 768);
+      };
 
-    // Clean up event listener
-    return () => window.removeEventListener('resize', handleResize);
+      // Add event listener
+      window.addEventListener('resize', handleResize);
+
+      // Clean up event listener
+      return () => window.removeEventListener('resize', handleResize);
+    }
   }, []);
   
   return (
