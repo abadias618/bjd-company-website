@@ -14,3 +14,7 @@ March 15th
 - Maybe change color or delete completely PageFooter component
 - Mobile Friendly (almost done with Index page, just missing the TwoColumns Component)
 
+### IDEAS
+- Very cool animation for "BJD" lettes logo
+https://codepen.io/web-tiki/pen/LGYBrQ
+

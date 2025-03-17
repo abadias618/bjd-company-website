@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import './grid.css';
 import wallBW from "../images/wall-bw-alt-bg.png";
 
 const GridLayout = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
